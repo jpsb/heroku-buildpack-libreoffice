@@ -44,14 +44,14 @@ mkdir -p $CACHE_DIR/$DEPS_ARCHIVE_NAME
 tar xf $CACHE_DIR/$DEPS_FILE_NAME -C $CACHE_DIR
 cp -r $CACHE_DIR/$DEPS_ARCHIVE_NAME $RAILS_DIR/vendor/libreoffice/deps
 
-echo "-----> LibreOffice: Setting PATH and LD_LIBRARY_PATH"
-PROFILE_PATH=$RAILS_DIR/.profile.d/libreoffice.sh
-mkdir -p $RAILS_DIR/.profile.d
+#echo "-----> LibreOffice: Setting PATH and LD_LIBRARY_PATH"
+#PROFILE_PATH=$RAILS_DIR/.profile.d/libreoffice.sh
+#mkdir -p $RAILS_DIR/.profile.d
 
 # add vendor binaries to the path
-echo "-----> add vendor binaries to the path"
-echo "export PATH=\"\$HOME/vendor/libreoffice/program:\$HOME/vendor/libreoffice/deps/bin:\$PATH\"" > $PROFILE_PATH
+#echo "-----> add vendor binaries to the path"
+#echo "export PATH=\"\$HOME/vendor/libreoffice/program:\$HOME/vendor/libreoffice/deps/bin:\$PATH\"" > $PROFILE_PATH
 
 # configure LD_LIBRARY_PATH to include dependencies
-echo "-----> configure LD_LIBRARY_PATH to include dependencies"
-echo "export LD_LIBRARY_PATH=\"\$HOME/vendor/libreoffice/deps/lib:\$LD_LIBRARY_PATH\"" >> $PROFILE_PATH
+#echo "-----> configure LD_LIBRARY_PATH to include dependencies"
+#echo "export LD_LIBRARY_PATH=\"\$HOME/vendor/libreoffice/deps/lib:\$LD_LIBRARY_PATH\"" >> $PROFILE_PATH
