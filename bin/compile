@@ -43,6 +43,7 @@ cp -r ${CACHE_DIR}/${ARCHIVE_NAME}/opt/libreoffice4.4/* $LOCATION
 #mkdir -p $CACHE_DIR/$DEPS_ARCHIVE_NAME
 #tar xf $CACHE_DIR/$DEPS_FILE_NAME -C $CACHE_DIR
 #cp -r $CACHE_DIR/$DEPS_ARCHIVE_NAME $LOCATION/deps
+rm -rf ${CACHE_DIR}/${ARCHIVE_NAME}/opt/libreoffice4.4
 
 #echo "-----> LibreOffice: Setting PATH and LD_LIBRARY_PATH"
 #mkdir -p /app/.profile.d
