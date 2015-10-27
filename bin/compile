@@ -34,15 +34,15 @@ echo "-----> LibreOffice: BUILD DIR: ${BUILD_DIR}"
 echo "-----> LibreOffice: CACHE DIR: ${CACHE_DIR}"
 
 echo "-----> LibreOffice: Extracting LibreOffice ${VERSION} binaries to ${BUILD_DIR}/vendor/libreoffice"
-#mkdir -p $CACHE_DIR/$ARCHIVE_NAME
+mkdir -p $CACHE_DIR/$ARCHIVE_NAME
 mkdir -p $LOCATION
-#tar xf $CACHE_DIR/$FILE_NAME -C $CACHE_DIR/$ARCHIVE_NAME
-#cp -r ${CACHE_DIR}/${ARCHIVE_NAME}/opt/libreoffice4.4/* /app/vendor/libreoffice
+tar xf $CACHE_DIR/$FILE_NAME -C $CACHE_DIR/$ARCHIVE_NAME
+cp -r ${CACHE_DIR}/${ARCHIVE_NAME}/opt/libreoffice4.4/* $LOCATION
 
-#echo "-----> LibreOffice: Extracting LibreOffice dependencies to ${RAILS_DIR}/vendor/libreoffice/deps"
-#mkdir -p $CACHE_DIR/$DEPS_ARCHIVE_NAME
-#tar xf $CACHE_DIR/$DEPS_FILE_NAME -C $CACHE_DIR
-#cp -r $CACHE_DIR/$DEPS_ARCHIVE_NAME /app/vendor/libreoffice/deps
+echo "-----> LibreOffice: Extracting LibreOffice dependencies to ${BUILD_DIR}/vendor/libreoffice/deps"
+mkdir -p $CACHE_DIR/$DEPS_ARCHIVE_NAME
+tar xf $CACHE_DIR/$DEPS_FILE_NAME -C $CACHE_DIR
+cp -r $CACHE_DIR/$DEPS_ARCHIVE_NAME $LOCATION/deps
 
 #echo "-----> LibreOffice: Setting PATH and LD_LIBRARY_PATH"
 #mkdir -p /app/.profile.d
