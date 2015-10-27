@@ -35,18 +35,18 @@ echo "-----> LibreOffice: CACHE DIR: ${CACHE_DIR}"
 
 echo "-----> LibreOffice: Extracting LibreOffice ${VERSION} binaries to ${RAILS_DIR}/vendor/libreoffice"
 mkdir -p $CACHE_DIR/$ARCHIVE_NAME
-mkdir -p $RAILS_DIR/vendor/libreoffice
+mkdir -p /app/vendor/libreoffice
 tar xf $CACHE_DIR/$FILE_NAME -C $CACHE_DIR/$ARCHIVE_NAME
-cp -r ${CACHE_DIR}/${ARCHIVE_NAME}/opt/libreoffice4.4/* $RAILS_DIR/vendor/libreoffice
+cp -r ${CACHE_DIR}/${ARCHIVE_NAME}/opt/libreoffice4.4/* /app/vendor/libreoffice
 
 echo "-----> LibreOffice: Extracting LibreOffice dependencies to ${RAILS_DIR}/vendor/libreoffice/deps"
 mkdir -p $CACHE_DIR/$DEPS_ARCHIVE_NAME
 tar xf $CACHE_DIR/$DEPS_FILE_NAME -C $CACHE_DIR
-cp -r $CACHE_DIR/$DEPS_ARCHIVE_NAME $RAILS_DIR/vendor/libreoffice/deps
+cp -r $CACHE_DIR/$DEPS_ARCHIVE_NAME /app/vendor/libreoffice/deps
 
 #echo "-----> LibreOffice: Setting PATH and LD_LIBRARY_PATH"
-#PROFILE_PATH=$RAILS_DIR/.profile.d/libreoffice.sh
-#mkdir -p $RAILS_DIR/.profile.d
+#mkdir -p /app/.profile.d
+#PROFILE_PATH=/app/.profile.d/libreoffice.sh
 
 # add vendor binaries to the path
 #echo "-----> add vendor binaries to the path"
