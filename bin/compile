@@ -4,6 +4,7 @@ set -e
 
 BUILD_DIR=$1
 CACHE_DIR=$2
+LOCATION="$BUILD_DIR/vendor/libreoffice"
 
 # config
 VERSION="4.4.5"
@@ -34,7 +35,7 @@ echo "-----> LibreOffice: CACHE DIR: ${CACHE_DIR}"
 
 echo "-----> LibreOffice: Extracting LibreOffice ${VERSION} binaries to ${BUILD_DIR}/vendor/libreoffice"
 #mkdir -p $CACHE_DIR/$ARCHIVE_NAME
-mkdir -p /app/vendor/libreoffice
+mkdir -p $LOCATION
 #tar xf $CACHE_DIR/$FILE_NAME -C $CACHE_DIR/$ARCHIVE_NAME
 #cp -r ${CACHE_DIR}/${ARCHIVE_NAME}/opt/libreoffice4.4/* /app/vendor/libreoffice
 
