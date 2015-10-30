@@ -54,7 +54,7 @@ PROFILE_PATH="$BUILD_DIR/.profile.d/libreoffice.sh"
 mkdir -p $(dirname $PROFILE_PATH)
 
 # add vendor binaries to the path
-echo 'export PATH="$HOME/vendor/libreoffice/program:$HOME/vendor/libreoffice/deps/bin:$HOME/vendor/libreoffice/ure/bin:$PATH"' >> $PROFILE_PATH
+echo 'export PATH="$HOME/vendor/libreoffice/program:$HOME/vendor/libreoffice/deps/bin:$PATH"' >> $PROFILE_PATH
 
 # configure LD_LIBRARY_PATH to include dependencies
 echo 'export LD_LIBRARY_PATH="$HOME/vendor/libreoffice/deps/lib:$HOME/vendor/libreoffice/ure/lib:$LD_LIBRARY_PATH"' >> $PROFILE_PATH
