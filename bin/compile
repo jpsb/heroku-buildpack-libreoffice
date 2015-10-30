@@ -54,7 +54,8 @@ PROFILE_PATH="$BUILD_DIR/.profile.d/libreoffice.sh"
 mkdir -p $(dirname $PROFILE_PATH)
 
 echo "-----> LibreOffice: Creating a link to URE folder"
-ln -s $HOME/vendor/libreoffice/ure $HOME/vendor/libreoffice/ure-link
+cd $HOME/vendor/libreoffice
+ln -s ./ure ure-link
 
 # add vendor binaries to the path
 echo 'export PATH="$HOME/vendor/libreoffice/program:$HOME/vendor/libreoffice/deps/bin:$PATH"' >> $PROFILE_PATH
